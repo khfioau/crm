@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
 <meta charset="UTF-8">
 <link href="../../../jquery/bootstrap_3.3.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
@@ -35,46 +36,18 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="active">
-					<td><input type="checkbox" /></td>
-					<td>1</td>
-					<td>m</td>
-					<td>男</td>
-					<td>1</td>
-					<td>sex</td>
-				</tr>
+			<c:forEach var="data02" items="${requestScope.get('valuelist')}">
 				<tr>
-					<td><input type="checkbox" /></td>
-					<td>2</td>
-					<td>f</td>
-					<td>女</td>
-					<td>2</td>
-					<td>sex</td>
+					<td><label>
+						<input type="checkbox"/>
+					</label></td>
+					<td>${data.getId()}</td>
+					<td>${data02.getValue()}</td>
+					<td>${data02.getText()}</td>
+					<td>${data02.getOrderNo()}</td>
+					<td>${data02.getTypeCode()}</td>
 				</tr>
-				<tr class="active">
-					<td><input type="checkbox" /></td>
-					<td>3</td>
-					<td>1</td>
-					<td>一级部门</td>
-					<td>1</td>
-					<td>orgType</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" /></td>
-					<td>4</td>
-					<td>2</td>
-					<td>二级部门</td>
-					<td>2</td>
-					<td>orgType</td>
-				</tr>
-				<tr class="active">
-					<td><input type="checkbox" /></td>
-					<td>5</td>
-					<td>3</td>
-					<td>三级部门</td>
-					<td>3</td>
-					<td>orgType</td>
-				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
 	</div>

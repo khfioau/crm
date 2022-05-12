@@ -29,11 +29,11 @@
 		<table class="table table-hover">
 			<thead>
 				<tr style="color: #B3B3B3;">
-					<td><input type="checkbox" /></td>
-					<td>序号</td>
-					<td>编码</td>
-					<td>名称</td>
-					<td>描述</td>
+					<th><input type="checkbox" /></th>
+					<th>序号</th>
+					<th>编码</th>
+					<th>名称</th>
+					<th>描述</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -44,13 +44,13 @@
 					<td>性别</td>
 					<td>性别包括男和女</td>
 				</tr>--%>
-				<c:forEach var="data" items="${requestScope.get('typelist')}">
+				<c:forEach var="data1" items="${requestScope.get('typelist1')}">
 					<tr>
 						<td><input type="checkbox"/></td>
 						<td>序号</td>
-						<td>${data.getCode()}</td>
-						<td>${data.getName()}</td>
-						<td>${data.getDescription()}</td>
+						<td>${data1.getCode()}</td>
+						<td>${data1.getName()}</td>
+						<td>${data1.getDescription()}</td>
 						<td>
 							<a href="${pageContext.request.contextPath}/toEdit?code=${data.getCode()}">编辑</a>
 							|

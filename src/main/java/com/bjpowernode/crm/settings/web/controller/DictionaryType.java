@@ -18,8 +18,8 @@ public class DictionaryType {
     @RequestMapping("/type/all")
     public String queryAll(Model model){
         List<Type> typelist = typeService.queryAll();
-
-        model.addAttribute("typelist",typelist);
+        System.out.println(typelist);
+        model.addAttribute("typelist1",typelist);
         return "settings/dictionary/type/index";
     }
 

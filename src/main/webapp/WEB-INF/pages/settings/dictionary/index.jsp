@@ -32,7 +32,7 @@
 		});
 		
 		
-		window.open("type/index.html","workareaFrame");
+		window.open("/type/all","workareaFrame");
 		
 	});
 	
@@ -160,7 +160,7 @@
 		
 			<ul id="no1" class="nav nav-pills nav-stacked">
 				<li class="liClass"><a href="/type/all" target="workareaFrame"><span class="glyphicon glyphicon-book"></span> 字典类型</a></li>
-				<li class="liClass"><a href="value/index.jsp" target="workareaFrame"><span class="glyphicon glyphicon-list"></span> 字典值</a></li>
+				<li class="liClass"><a href="/value/selectAll" target="workareaFrame"><span class="glyphicon glyphicon-list"></span> 字典值</a></li>
 			</ul>
 			
 			<!-- 分割线 -->
