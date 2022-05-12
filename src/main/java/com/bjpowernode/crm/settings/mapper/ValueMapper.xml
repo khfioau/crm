@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.bjpowernode.crm.settings.mapper.ValueMapper">
+
+    <resultMap id="resultValue" type="com.bjpowernode.crm.settings.domain.Value">
+        <!-- id为主键 -->
+        <id column="id" property="id"/>
+        <!-- column是数据库表的列名 , property是对应实体类的属性名 -->
+        <result column="value" property="value"/>
+        <result column="text" property="text"/>
+        <result column="order_no" property="orderNo"/>
+        <result column="type_code" property="typeCode"/>
+    </resultMap>
+
+   <select id="selectAll" resultMap="resultValue">
+       select * from tbl_dic_value;
+   </select>
+</mapper>
